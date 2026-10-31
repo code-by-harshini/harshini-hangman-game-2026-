@@ -1,0 +1,177 @@
+# Hangman Game (Text-Based) — Python Mini Project
+
+## 🎯 Objective
+To design and implement a simple, text-based **Hangman Game** in Python
+using only fundamental programming concepts taught in the first year of
+a Computer Science Engineering course — such as loops, conditionals,
+functions, strings, and lists — without relying on any external
+libraries or advanced features.
+
+## ✨ Features
+- Randomly selects a word from a fixed list of 5 words every time you play.
+- Player guesses the word one letter at a time.
+- Displays the word progress using underscores (`_`) for hidden letters.
+- Shows correctly guessed letters and wrongly guessed letters separately.
+- Tracks and displays remaining attempts (maximum 6 wrong guesses allowed).
+- Handles invalid input gracefully:
+  - Empty input
+  - More than one character
+  - Numbers or symbols
+  - Duplicate letters already guessed
+- Accepts both uppercase and lowercase letters (e.g., `A` and `a` work the same).
+- Displays a congratulation message when the player wins.
+- Reveals the correct word when the player loses.
+
+## 🧠 Concepts Used
+- `random` module (`random.choice()`)
+- `while` loop (main game loop and input validation loop)
+- `if-else` conditional statements
+- Strings and string methods (`.lower()`, `.strip()`, `.isalpha()`)
+- Lists (word list, guessed letters list, wrong letters list)
+- Functions (`choose_word()`, `display_word()`, `get_guess()`, `play_game()`)
+- Basic `input()` and `print()` for interaction
+
+## 📋 Requirements
+- Python 3.x installed on your system
+- No external/third-party libraries needed (only Python's built-in `random` module)
+
+## ▶️ How to Run
+1. Make sure Python 3 is installed.
+2. Download the `hangman.py` file.
+3. Open a terminal/command prompt in that folder.
+4. Run the following command:
+   ```bash
+   python hangman.py
+   ```
+5. Start guessing letters one at a time until you win or run out of attempts!
+
+## 📂 Project Structure
+```
+├── hangman.py     # Main Hangman game source code
+└── README.md      # Project documentation
+```
+
+## 💻 Sample Output
+
+### A. Win Case
+```
+==================================================
+ Welcome to HANGMAN - Guess the Word! 
+==================================================
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: p
+Good job! 'p' is in the word.
+
+Word: p _ _ _ _ _
+Correct guesses: ['p']
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: y
+Good job! 'y' is in the word.
+
+Word: p y _ _ _ _
+Correct guesses: ['p', 'y']
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: t
+Good job! 't' is in the word.
+
+Word: p y t _ _ _
+Correct guesses: ['p', 'y', 't']
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: h
+Good job! 'h' is in the word.
+
+Word: p y t h _ _
+Correct guesses: ['p', 'y', 't', 'h']
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: o
+Good job! 'o' is in the word.
+
+Word: p y t h o _
+Correct guesses: ['p', 'y', 't', 'h', 'o']
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: n
+Good job! 'n' is in the word.
+
+==================================================
+Word: p y t h o n
+CONGRATULATIONS! You guessed the word 'python' correctly!
+==================================================
+```
+
+### B. Lose Case
+```
+==================================================
+ Welcome to HANGMAN - Guess the Word! 
+==================================================
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: []
+Remaining attempts: 6
+Enter a letter: q
+Sorry, 'q' is not in the word.
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: ['q']
+Remaining attempts: 5
+Enter a letter: w
+Sorry, 'w' is not in the word.
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: ['q', 'w']
+Remaining attempts: 4
+Enter a letter: z
+Sorry, 'z' is not in the word.
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: ['q', 'w', 'z']
+Remaining attempts: 3
+Enter a letter: x
+Sorry, 'x' is not in the word.
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: ['q', 'w', 'z', 'x']
+Remaining attempts: 2
+Enter a letter: j
+Sorry, 'j' is not in the word.
+
+Word: _ _ _ _ _ _
+Correct guesses: []
+Wrong guesses: ['q', 'w', 'z', 'x', 'j']
+Remaining attempts: 1
+Enter a letter: k
+Sorry, 'k' is not in the word.
+
+==================================================
+You have run out of attempts. GAME OVER!
+The correct word was: 'python'
+==================================================
+```
+
+## 🚀 Future Improvements (Optional)
+- Add a visual ASCII-art hangman drawing that updates with each wrong guess.
+- Allow the player to choose a difficulty level (shorter/longer words).
+- Add a scoring system across multiple rounds.
+- Read the word list from an external text file instead of hardcoding it.
+- Add a "play again?" option after each game ends.
+
+## 👤 Author
+Name: Harshini A
+roll no:25CS079
+task: Hangman game
+
+---
+*This project was built as an original submission for a first-year CSE Python programming assignment.*
